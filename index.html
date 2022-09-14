@@ -71,6 +71,222 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-用hexo-git搭建博客" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/14/%E7%94%A8hexo-git%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time class="dt-published" datetime="2022-09-14T08:27:12.000Z" itemprop="datePublished">2022-09-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/09/14/%E7%94%A8hexo-git%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">用hexo+git搭建博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="hexo-git"><a href="#hexo-git" class="headerlink" title="hexo+git"></a>hexo+git</h2><h4 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h4><ul>
+<li><p>首先要做好准备工作</p>
+<ol>
+<li><p>git的下载安装</p>
+</li>
+<li><p>github的下载安装</p>
+</li>
+<li><p>node.js的下载安装</p>
+</li>
+<li><p>npm的下载安装</p>
+<p>（准备工作我真的感觉会有很多问题避免少走弯路以下时注意事项，害都是我的血泪教训啊，www )</p>
+<ul>
+<li>安装的时候如果只是在文件夹里打开cmd或者是用git打开输入命令可能会有权限问题如果有此类问题的报错要打开管理员权限</li>
+<li>一般来说在本地的打开是端口4000如果无法访问一般可以换个端口或者是重新打开iis</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>会使用hexo命令</p>
+<ol>
+<li>hexo new “”   （新建文档）</li>
+<li>hexo   g</li>
+<li>hexo   d</li>
+<li>hexo   s</li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/14/%E7%94%A8hexo-git%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="cl81dzbnr000a6suj557b2wav" data-title="用hexo+git搭建博客" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%93%E8%AE%BA%E5%B8%96/" rel="tag">结论帖</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-对git的认识（3）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/14/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%883%EF%BC%89/" class="article-date">
+  <time class="dt-published" datetime="2022-09-14T07:27:09.000Z" itemprop="datePublished">2022-09-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/09/14/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%883%EF%BC%89/">对git的认识（3）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><h4 id="在使用git时的主要问题解决"><a href="#在使用git时的主要问题解决" class="headerlink" title="在使用git时的主要问题解决"></a>在使用git时的主要问题解决</h4><ul>
+<li><p>版本回退（未提交到远程库）</p>
+<ol>
+<li>先用git log –pretty&#x3D;oneline&#x2F;git reflog查看之前提交的id</li>
+<li>使用git reset –hard id</li>
+</ol>
+</li>
+<li><p>（未提交到远程库）</p>
+<ol>
+<li>丢弃工作区最近一次的修改没提交到版本库 git checkout – 文件名（用版本库替代工作区的文件内容）</li>
+<li>丢弃最近一次已经提交到版本库的修改 git reset HEAD 文件名</li>
+</ol>
+</li>
+<li><p>解决冲突，当不同的人修改了文件的同一个地方会出现此问题</p>
+<ol>
+<li>用cat 查看文件内容（查看不同）</li>
+<li>手动修改提交</li>
+</ol>
+</li>
+<li><p>解决bug</p>
+<ol>
+<li><p>先冻结没有提交的工作</p>
+</li>
+<li><p>选择在哪条分支上修改</p>
+</li>
+<li><p>创建一个新分支（专门解决问题）</p>
+</li>
+<li><p>修复问题（提交时看下id）</p>
+</li>
+<li><p>切换分支完成合并，删除解决问题的分支</p>
+</li>
+<li><p>将修复bug的提交复制到所有分支 git cherry-pick id</p>
+</li>
+</ol>
+</li>
+<li><p>多人协作时遇到问题(你和同伴推送的同一个分支有冲突)</p>
+<ol>
+<li>git pull（先将同伴最新的提交从远程库抓下来，但有可能会显示本地分支没有和远程同伴的分支链接此时用git branch –set-upstream-to&#x3D;&#x2F;分支名 分支名先链接再git pull)</li>
+<li>手动解决冲突</li>
+<li>推送到远程库</li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/14/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%883%EF%BC%89/" data-id="cl81dzbnm00046sujc18k9rdq" data-title="对git的认识（3）" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%93%E8%AE%BA%E5%B8%96/" rel="tag">结论帖</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-对git的认识（2）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%882%EF%BC%89/" class="article-date">
+  <time class="dt-published" datetime="2022-09-13T14:37:45.000Z" itemprop="datePublished">2022-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%882%EF%BC%89/">对git的认识（2）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><h4 id="接着follow-up啦（主要列举一些常见的我也希望自己一定要记住的）"><a href="#接着follow-up啦（主要列举一些常见的我也希望自己一定要记住的）" class="headerlink" title="接着follow up啦（主要列举一些常见的我也希望自己一定要记住的）"></a>接着follow up啦（主要列举一些常见的我也希望自己一定要记住的）</h4><ol>
+<li>git add 文件名 （加到暂存区）</li>
+<li>git commit -m “ “    （提交到版本库）</li>
+<li>cat 文件名  （看工作区当前的内容）</li>
+<li>git status</li>
+<li>git diff</li>
+<li>git log       (看历史记录后可再加指令更详细)</li>
+<li>git rest –hard id    (用于版本回退)</li>
+<li>git rm 文件名   （在工作区中删除文件）</li>
+<li>git rm+git commit    (在版本库中删掉)</li>
+<li>git push -u origin 分支名    （将本地分支和远程库链接并且推送地分支到远程库）</li>
+<li>git push origin 分支名    （ 将本地分支的修改推送到远程库）</li>
+<li>git switch -c 分支名   （建立新的分支）</li>
+<li>git branck    (查看当前所有的分支)</li>
+<li>git branck -d 分支名  （删除分支）&#x2F;   git branck -D 分支名   （强制删除分支）</li>
+<li>get switch 分支名(切换到此分支)</li>
+<li>git merge 分支名 （合并当前分支和此分支）&#x2F;  git merge –no-ff-m “” 分支名   （和前者作用相同不过不会删除掉分支的历史记录）</li>
+<li>git branch -d 分支名   （删除此分支）</li>
+<li>git stash     (在修改未提交时冻结使得工作区是干净的)</li>
+<li>git stash list   (查看冻结前的工作区)</li>
+<li>git stash pop    (恢复冻结的工作区内容，使工作区回到未冻结前的状态)</li>
+<li>git cherry -pick id  (将在某个分支上提交的修改复制到此分支上)</li>
+<li>git remote -v  (查看远程库的信息)</li>
+<li>git pull     (该命令将获取远程服务器上的变更，并合并到你的工作目录，针对于你和同伴对同一个分支进行修改，合并)</li>
+<li>git rebase (使历史记录即git log为一条直线)</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%882%EF%BC%89/" data-id="cl81dzbns000b6suj9feh1kzk" data-title="对git的认识（2）" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%93%E8%AE%BA%E5%B8%96/" rel="tag">结论帖</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-对git的认识（1）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%881%EF%BC%89/" class="article-date">
@@ -116,7 +332,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%881%EF%BC%89/" data-id="cl81dvj4e00005cuj5e6c2tcz" data-title="对git的认识（1）" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%881%EF%BC%89/" data-id="cl81dzbnk00026sujehvn48n5" data-title="对git的认识（1）" class="article-share-link">Share</a>
       
       
       
@@ -157,7 +373,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/12/%E4%BD%A0%E5%A5%BD%EF%BC%8CHexo/" data-id="cl81dvj4i00015cujdn8bhv1g" data-title="你好，Hexo" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/12/%E4%BD%A0%E5%A5%BD%EF%BC%8CHexo/" data-id="cl81dzbni00016sujco3nhh1v" data-title="你好，Hexo" class="article-share-link">Share</a>
       
       
       
@@ -210,7 +426,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/12/hello-world/" data-id="cl81dvj4l00035cujfbhgauod" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/12/hello-world/" data-id="cl81dzbnf00006suja89cfv28" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -245,7 +461,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E5%B0%8F%E5%BF%83%E6%83%85/" style="font-size: 10px;">小心情</a> <a href="/tags/%E7%BB%93%E8%AE%BA%E5%B8%96/" style="font-size: 10px;">结论帖</a>
+      <a href="/tags/%E5%B0%8F%E5%BF%83%E6%83%85/" style="font-size: 10px;">小心情</a> <a href="/tags/%E7%BB%93%E8%AE%BA%E5%B8%96/" style="font-size: 20px;">结论帖</a>
     </div>
   </div>
 
@@ -267,15 +483,23 @@
       <ul>
         
           <li>
+            <a href="/2022/09/14/%E7%94%A8hexo-git%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">用hexo+git搭建博客</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/14/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%883%EF%BC%89/">对git的认识（3）</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%882%EF%BC%89/">对git的认识（2）</a>
+          </li>
+        
+          <li>
             <a href="/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%881%EF%BC%89/">对git的认识（1）</a>
           </li>
         
           <li>
             <a href="/2022/09/12/%E4%BD%A0%E5%A5%BD%EF%BC%8CHexo/">你好，Hexo</a>
-          </li>
-        
-          <li>
-            <a href="/2022/09/12/hello-world/">Hello World</a>
           </li>
         
       </ul>

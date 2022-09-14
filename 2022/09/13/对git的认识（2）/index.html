@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>对git的认识（1） | Hexo</title>
+  <title>对git的认识（2） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="git对git的认识有四部分follow up  将ssh中的文件后缀为.pub的粘到github中的固定页面   先建立远程库将远程库和本地库连接起来，打开GitHub他的空白库下有方法介绍（一般用克隆，注意建立远程库时一定要勾选add README,按提示方法克隆完毕后可以用命令cd 库名+ls查看）  先建立本地库，将本地库和建立好的远程库链接起来（先手动创建一个文件夹然后用git bush">
+  <meta name="description" content="git接着follow up啦（主要列举一些常见的我也希望自己一定要记住的） git add 文件名 （加到暂存区） git commit -m “ “    （提交到版本库） cat 文件名  （看工作区当前的内容） git status git diff git log       (看历史记录后可再加指令更详细) git rest –hard id    (用于版本回退) git rm 文件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对git的认识（1）">
-<meta property="og:url" content="http://example.com/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%881%EF%BC%89/index.html">
+<meta property="og:title" content="对git的认识（2）">
+<meta property="og:url" content="http://example.com/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%882%EF%BC%89/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="git对git的认识有四部分follow up  将ssh中的文件后缀为.pub的粘到github中的固定页面   先建立远程库将远程库和本地库连接起来，打开GitHub他的空白库下有方法介绍（一般用克隆，注意建立远程库时一定要勾选add README,按提示方法克隆完毕后可以用命令cd 库名+ls查看）  先建立本地库，将本地库和建立好的远程库链接起来（先手动创建一个文件夹然后用git bush">
+<meta property="og:description" content="git接着follow up啦（主要列举一些常见的我也希望自己一定要记住的） git add 文件名 （加到暂存区） git commit -m “ “    （提交到版本库） cat 文件名  （看工作区当前的内容） git status git diff git log       (看历史记录后可再加指令更详细) git rest –hard id    (用于版本回退) git rm 文件">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-09-13T14:34:29.000Z">
-<meta property="article:modified_time" content="2022-09-14T08:26:09.936Z">
+<meta property="article:published_time" content="2022-09-13T14:37:45.000Z">
+<meta property="article:modified_time" content="2022-09-14T08:53:20.168Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="结论帖">
 <meta name="twitter:card" content="summary">
@@ -74,10 +74,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-对git的认识（1）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-对git的认识（2）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%881%EF%BC%89/" class="article-date">
-  <time class="dt-published" datetime="2022-09-13T14:34:29.000Z" itemprop="datePublished">2022-09-13</time>
+    <a href="/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%882%EF%BC%89/" class="article-date">
+  <time class="dt-published" datetime="2022-09-13T14:37:45.000Z" itemprop="datePublished">2022-09-13</time>
 </a>
     
   </div>
@@ -88,7 +88,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      对git的认识（1）
+      对git的认识（2）
     </h1>
   
 
@@ -96,30 +96,37 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>对git的认识有四部分follow up</p>
-<ul>
-<li><p>将ssh中的文件后缀为.pub的粘到github中的固定页面</p>
-</li>
-<li><ol>
-<li><p>先建立远程库将远程库和本地库连接起来，打开GitHub他的空白库下有方法介绍（一般用克隆，注意建立远程库时一定要勾选add README,按提示方法克隆完毕后可以用命令cd 库名+ls查看）</p>
-</li>
-<li><p>先建立本地库，将本地库和建立好的远程库链接起来（先手动创建一个文件夹然后用git bush打开输入命令 git init 把它变成git可管理的仓库然后在里面添加文件，本地版本库就建好了，随后建立一个远程库，根据github下面的提示在我们的本地库下面打开git bush输入命令即可链接）</p>
-<p>（在hexo的安装里呢采用的是先建本地库再建远程库然后在hexo这个本地库的config.yml文件中的deploy属性下添加type:git  repo值   branch值就ok啦）</p>
-</li>
+        <h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><h4 id="接着follow-up啦（主要列举一些常见的我也希望自己一定要记住的）"><a href="#接着follow-up啦（主要列举一些常见的我也希望自己一定要记住的）" class="headerlink" title="接着follow up啦（主要列举一些常见的我也希望自己一定要记住的）"></a>接着follow up啦（主要列举一些常见的我也希望自己一定要记住的）</h4><ol>
+<li>git add 文件名 （加到暂存区）</li>
+<li>git commit -m “ “    （提交到版本库）</li>
+<li>cat 文件名  （看工作区当前的内容）</li>
+<li>git status</li>
+<li>git diff</li>
+<li>git log       (看历史记录后可再加指令更详细)</li>
+<li>git rest –hard id    (用于版本回退)</li>
+<li>git rm 文件名   （在工作区中删除文件）</li>
+<li>git rm+git commit    (在版本库中删掉)</li>
+<li>git push -u origin 分支名    （将本地分支和远程库链接并且推送地分支到远程库）</li>
+<li>git push origin 分支名    （ 将本地分支的修改推送到远程库）</li>
+<li>git switch -c 分支名   （建立新的分支）</li>
+<li>git branck    (查看当前所有的分支)</li>
+<li>git branck -d 分支名  （删除分支）&#x2F;   git branck -D 分支名   （强制删除分支）</li>
+<li>get switch 分支名(切换到此分支)</li>
+<li>git merge 分支名 （合并当前分支和此分支）&#x2F;  git merge –no-ff-m “” 分支名   （和前者作用相同不过不会删除掉分支的历史记录）</li>
+<li>git branch -d 分支名   （删除此分支）</li>
+<li>git stash     (在修改未提交时冻结使得工作区是干净的)</li>
+<li>git stash list   (查看冻结前的工作区)</li>
+<li>git stash pop    (恢复冻结的工作区内容，使工作区回到未冻结前的状态)</li>
+<li>git cherry -pick id  (将在某个分支上提交的修改复制到此分支上)</li>
+<li>git remote -v  (查看远程库的信息)</li>
+<li>git pull     (该命令将获取远程服务器上的变更，并合并到你的工作目录，针对于你和同伴对同一个分支进行修改，合并)</li>
+<li>git rebase (使历史记录即git log为一条直线)</li>
 </ol>
-</li>
-<li><p>一些具体命令的实现</p>
-</li>
-<li><p>一些问题的解决</p>
-<p>那下面一篇即（2）呢我会具体写一下git中一些具体命令的实现</p>
-<p>在（3）呢我会具体写一下常见的问题及解决方案</p>
-</li>
-</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%881%EF%BC%89/" data-id="cl81dzbnk00026sujehvn48n5" data-title="对git的认识（1）" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%882%EF%BC%89/" data-id="cl81dzbns000b6suj9feh1kzk" data-title="对git的认识（2）" class="article-share-link">Share</a>
       
       
       
@@ -131,19 +138,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%882%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/09/14/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%883%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          对git的认识（2）
+          对git的认识（3）
         
       </div>
     </a>
   
   
-    <a href="/2022/09/12/%E4%BD%A0%E5%A5%BD%EF%BC%8CHexo/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%881%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">你好，Hexo</div>
+      <div class="article-nav-title">对git的认识（1）</div>
     </a>
   
 </nav>
