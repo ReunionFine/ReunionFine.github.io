@@ -97,7 +97,13 @@
 <ul>
 <li><p>将ssh中的文件后缀为.pub的粘到github中的固定页面</p>
 </li>
-<li><p>将远程库和本地库连接起来一般有三种方法打开GitHub他的空白库下有方法介绍（在hexo的安装里呢采用的是先建本地库再建远程库然后在hexo这个本地库的config.yml文件中的deploy属性下添加type:git  repo值   branch值就ok啦）</p>
+<li><ol>
+<li><p>先建立远程库将远程库和本地库连接起来，打开GitHub他的空白库下有方法介绍（一般用克隆，注意建立远程库时一定要勾选add README,按提示方法克隆完毕后可以用命令cd 库名+ls查看）</p>
+</li>
+<li><p>先建立本地库，将本地库和建立好的远程库链接起来（先手动创建一个文件夹然后用git bush打开输入命令 git init 把它变成git可管理的仓库然后在里面添加文件，本地版本库就建好了，随后建立一个远程库，根据github下面的提示在我们的本地库下面打开git bush输入命令即可链接）</p>
+<p>（在hexo的安装里呢采用的是先建本地库再建远程库然后在hexo这个本地库的config.yml文件中的deploy属性下添加type:git  repo值   branch值就ok啦）</p>
+</li>
+</ol>
 </li>
 <li><p>一些具体命令的实现</p>
 </li>
@@ -110,7 +116,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%881%EF%BC%89/" data-id="cl80aqmi70001doujdnm23g6v" data-title="对git的认识（1）" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/13/%E5%AF%B9git%E7%9A%84%E8%AE%A4%E8%AF%86%EF%BC%881%EF%BC%89/" data-id="cl81dvj4e00005cuj5e6c2tcz" data-title="对git的认识（1）" class="article-share-link">Share</a>
       
       
       
@@ -151,7 +157,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/12/%E4%BD%A0%E5%A5%BD%EF%BC%8CHexo/" data-id="cl80aqmi80002doujchkb32uh" data-title="你好，Hexo" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/12/%E4%BD%A0%E5%A5%BD%EF%BC%8CHexo/" data-id="cl81dvj4i00015cujdn8bhv1g" data-title="你好，Hexo" class="article-share-link">Share</a>
       
       
       
@@ -204,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/12/hello-world/" data-id="cl80aqmi30000douja3wv1e81" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/12/hello-world/" data-id="cl81dvj4l00035cujfbhgauod" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
